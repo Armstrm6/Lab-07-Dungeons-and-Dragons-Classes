@@ -1,0 +1,145 @@
+//Populates the two parties into temporary PARTY vectors to be used in the attack phase
+    Party<ICharacter*> * tempParty1;
+    Party<ICharacter*> * tempParty2;
+    *tempParty1 = this->getFirstParty();
+    *tempParty2 = this->getSecondParty();
+    std::vector<ICharacter*>  temp1 = tempParty1->getFrontLine() + tempParty1->getBackLine();
+    std::vector<ICharacter*>  temp2 = tempParty2->getFrontLine() + tempParty2->getBackLine();
+    int party_val = 0;
+    std::vector<ICharacter*> characters = determineOrderOfCharacters();
+
+    while(!m_done)
+    {
+        std::vector<ICharacter*> characters = determineOrderOfCharacters();
+        for (auto it = characters.begin(); it < characters.end(); it++)
+        {
+            ICharacter * character = *it;
+            //isAlive
+            if(character->IsAlive())
+            {
+                //Checks which team the character playing is on.
+                for(int i = 0; i<4; i++){
+                    if(character == temp1.at(i)){
+                        party_val = 1;
+                    }
+                    else{
+                        party_val = 2;
+                    }
+                }
+                int tohit;
+                int armor;
+                int armor2;
+                int armor3;
+                int armor4;
+                int heal;
+                //Attacks based on the class that the character is playing as.
+                if(dynamic_cast<Rogue*>(&character) && party_val == 1){
+                    int random1 = rand()%2+1;
+                    switch(random1){
+                        case 1:
+                            tohit = character->GetHitPoints();
+                            armor1 = (temp2.at(2)->getArmor())+10;
+                            armor2 = (temp2.at(3)->getArmor())+10;
+                            int random2 = rand()%20 + 1;
+                            tohit = tohit + random2;
+                            if(tohit > armor1)
+                            {
+                                
+                            }
+                        break;
+                        case 2:
+                            heal = character->getDamage();
+                            temp1(0)->setArmor(10);
+                            temp1(1)->setArmor(10);
+                            temp1(2)->setArmor(10);
+                            temp1(3)->setArmor(10);
+                            break;
+                    }
+                    
+                }
+                if(dynamic_cast<Fighter*>(&character)){
+                    
+                }
+                if(dynamic_cast<Cleric*>(&character)){
+                    
+                }
+                if(dynamic_cast<Wizard*>(&character)){
+                    
+                }
+
+                //Need pick a target (and that alive)
+
+                // Attack the target
+
+                // Apply the damage
+            }
+        }
+    }
+    printWinner();
+    std::cout << "placeholder";
+
+
+
+
+
+
+
+
+std::stack<int> myStack;
+
+
+	//Party<double> numberBox(5.4);
+	//Party<std::string> nameBox("character");
+
+	CharacterFactory characterFactory;
+
+
+	ICharacter * val = characterFactory.CreateCharacter(CharacterFactory::FighterClass, CharacterFactory::HumansRace);
+	Fighter* fighter = dynamic_cast<Fighter*>(val);
+
+    val = characterFactory.CreateCharacter(CharacterFactory::ClericClass, CharacterFactory::HumansRace);
+    Cleric* cleric = dynamic_cast<Cleric*>(val);
+
+    val = characterFactory.CreateCharacter(CharacterFactory::WizardClass, CharacterFactory::ElvesRace);
+    Wizard* wizard = dynamic_cast<Wizard*>(val);
+
+    val = characterFactory.CreateCharacter(CharacterFactory::ClericClass, CharacterFactory::HumansRace);
+    Rouge* rouge = dynamic_cast<Rouge*>(val);
+
+    Party<ICharacter*> *party1 = new Party<ICharacter*>(fighter);
+
+    party1->addFrontLine(fighter);
+    party1->addFrontLine(rouge);
+    party1->addBackLine(cleric);
+    party1->addBackLine(wizard);
+
+    Party<ICharacter*> *party2 = new Party<ICharacter*>(cleric);
+
+    val = characterFactory.CreateCharacter(CharacterFactory::WizardClass, CharacterFactory::DwarvesRace);
+    Wizard* wizardBad = dynamic_cast<Wizard*>(val);
+
+    val = characterFactory.CreateCharacter(CharacterFactory::ClericClass, CharacterFactory::ElvesRace);
+    Cleric* clericBad = dynamic_cast<Cleric*>(val);
+
+    val = characterFactory.CreateCharacter(CharacterFactory::FighterClass, CharacterFactory::DwarvesRace);
+    Fighter* fighterBad = dynamic_cast<Fighter*>(val);
+
+    val = characterFactory.CreateCharacter(CharacterFactory::RougeClass, CharacterFactory::HalflingsRace);
+    Rouge* rougeBad = dynamic_cast<Rouge*>(val);
+
+    party2->addFrontLine(wizardBad);
+    party2->addFrontLine(fighterBad);
+    party2->addBackLine(clericBad);
+    party2->addBackLine(rougeBad);
+
+
+
+    PartyAttack  partyAttack(party1,party2);
+    partyAttack.Attack();
+
+    std::cout << "Hello World!\n";
+
+
+
+
+

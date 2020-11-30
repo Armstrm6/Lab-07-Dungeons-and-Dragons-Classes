@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/runMain.dir/PartyAttack.cpp.o -c /home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/PartyAttack.cpp",
+  "file": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/PartyAttack.cpp"
+},
+{
+  "directory": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/applibrary.dir/Elves.cpp.o -c /home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/Elves.cpp",
+  "file": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/Elves.cpp"
+},
+{
+  "directory": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/applibrary.dir/Dwarves.cpp.o -c /home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/Dwarves.cpp",
+  "file": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/Dwarves.cpp"
+},
+{
+  "directory": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/applibrary.dir/Humans.cpp.o -c /home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/Humans.cpp",
+  "file": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/Humans.cpp"
+},
+{
+  "directory": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/applibrary.dir/Halflings.cpp.o -c /home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/Halflings.cpp",
+  "file": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/Halflings.cpp"
+},
+{
+  "directory": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/applibrary.dir/IRace.cpp.o -c /home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/IRace.cpp",
+  "file": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/IRace.cpp"
+},
+{
+  "directory": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/applibrary.dir/ICharacter.cpp.o -c /home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/ICharacter.cpp",
+  "file": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/ICharacter.cpp"
+},
+{
+  "directory": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/applibrary.dir/PartyForming.cpp.o -c /home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/PartyForming.cpp",
+  "file": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/PartyForming.cpp"
+},
+{
+  "directory": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/applibrary.dir/CharacterFactory.cpp.o -c /home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/CharacterFactory.cpp",
+  "file": "/home/konstantinos/Desktop/Labs/Lab07/Lab07Actual/CharacterFactory.cpp"
+}
+]

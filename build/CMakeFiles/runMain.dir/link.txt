@@ -1,0 +1,1 @@
+/bin/g++-9  -g  -rdynamic CMakeFiles/runMain.dir/PartyAttack.cpp.o  -o runMain  libapplibrary.a 
